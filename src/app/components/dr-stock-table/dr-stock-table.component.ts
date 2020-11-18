@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Maquillaje } from './intefaceTable';
 
 @Component({
   selector: 'app-dr-stock-table',
@@ -7,13 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrStockTableComponent implements OnInit {
 
-  labial =  {
-    "name" : "labial marshall",
-    "category" : "labiales",
-    "price" : "300",
-    "stock" : "3",
-    "image" : "./assets/Images/labialEJ.png"
-  }
+  maquillajes: Maquillaje[]=  [
+    {
+    name : "labial marshall",
+    category : "labiales",
+    price : 300,
+    stock : 3,
+    image : "./assets/Images/labialEJ.png",
+    prom :  true
+    },
+    {
+      name : "rimel avon",
+      category : "rimels",
+      price : 400,
+      stock : 1,
+      image : "./assets/Images/labialEJ.png",
+      prom :  false
+      },
+    {
+    name : "labial pink",
+    category : "labiales",
+    price : 600,
+    stock : 0,
+    image : "./assets/Images/labialEJ.png",
+    prom :  false
+    }
+  ]
 
   constructor() { }
 

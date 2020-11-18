@@ -6,25 +6,13 @@
         <th>Stock</th>
         <th>Image</th>
     </thead>
-    <tbody>
-        <tr>
-            <td>{{labial.name}}</td>
-            <td>{{labial.category}}</td>
-            <td>{{labial.price}}</td>
-            <td>{{labial.stock}}</td>
-            <td><img src="{{labial.image}}" alt="imagen"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+    <tbody> 
+        <tr *ngFor="let maquillaje of maquillajes" [ngClass]="{prom : maquillaje.prom, outProm : !maquillaje.prom}">
+            <td>{{maquillaje.name}}</td>
+            <td>{{maquillaje.category}}</td>
+            <td>{{maquillaje.price | currency}}</td>
+            <td><span *ngIf="maquillaje.stock == 0">SIN STOCK</span><span *ngIf="maquillaje.stock > 0">{{maquillaje.stock}}</span></td>
+            <td><img src="{{maquillaje.image}}" alt="imagen"></td>
         </tr>
     </tbody>
 </table>

@@ -1,0 +1,9 @@
+.prom{
+    border: 3px solid green;
+    background-color:  rgb(182, 255, 182);
+}
+
+.outProm{
+    border: 3px solid rgb(128, 0, 0);
+    background-color:  rgb(255, 182, 182);
+}
