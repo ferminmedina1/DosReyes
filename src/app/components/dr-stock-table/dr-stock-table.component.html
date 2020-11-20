@@ -1,18 +1,23 @@
 <table class="table">
     <thead>
+        <th>Imagen</th>
         <th>Nombre</th>
         <th>Categoria</th>
         <th>Precio</th>
         <th>Stock</th>
-        <th>Image</th>
+        <th>Compra</th>
     </thead>
     <tbody> 
         <tr *ngFor="let maquillaje of maquillajes" [ngClass]="{prom : maquillaje.prom, outProm : !maquillaje.prom}">
+            <td><img src="{{maquillaje.image}}" alt="{{maquillaje.name}} img"></td>
             <td>{{maquillaje.name}}</td>
             <td>{{maquillaje.category}}</td>
             <td>{{maquillaje.price | currency}}</td>
             <td><span *ngIf="maquillaje.stock == 0">SIN STOCK</span><span *ngIf="maquillaje.stock > 0">{{maquillaje.stock}}</span></td>
-            <td><img src="{{maquillaje.image}}" alt="imagen"></td>
+            <td>
+            <button class="btn btn-primary btn-sm" (click)="downCantidad(maquillaje)">-</button> 
+            <input type="number" [(ngModel)] ='maquillaje.cantidad'>
+            <button class="btn btn-primary btn-sm" (click)="upCantidad(maquillaje)">+</button></td>
         </tr>
     </tbody>
 </table>

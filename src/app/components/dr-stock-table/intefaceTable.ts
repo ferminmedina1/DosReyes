@@ -5,4 +5,5 @@ export interface Maquillaje{
     stock: number;
     image: string;
     prom: boolean;
+    cantidad: number;
   }

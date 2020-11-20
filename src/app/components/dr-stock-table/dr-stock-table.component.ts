@@ -15,15 +15,17 @@ export class DrStockTableComponent implements OnInit {
     price : 300,
     stock : 3,
     image : "./assets/Images/labialEJ.png",
-    prom :  true
+    prom :  true,
+    cantidad: 0,
     },
     {
-      name : "rimel avon",
+      name : "labial avon",
       category : "rimels",
       price : 400,
       stock : 1,
       image : "./assets/Images/labialEJ.png",
-      prom :  false
+      prom :  false,
+      cantidad: 0,
       },
     {
     name : "labial pink",
@@ -31,8 +33,18 @@ export class DrStockTableComponent implements OnInit {
     price : 600,
     stock : 0,
     image : "./assets/Images/labialEJ.png",
-    prom :  false
-    }
+    prom :  false,
+    cantidad: 0,
+    },
+    {
+      name : "labial puente azul",
+      category : "labiales",
+      price : 80,
+      stock : 20,
+      image : "./assets/Images/labialEJ.png",
+      prom :  false,
+      cantidad: 0,
+      }
   ]
 
   constructor() { }
@@ -40,4 +52,25 @@ export class DrStockTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  upCantidad(maquillaje: Maquillaje): void{
+    if(maquillaje.stock > maquillaje.cantidad)
+    maquillaje.cantidad++;
+    else{
+      maquillaje.cantidad = maquillaje.stock;
+    }
+  }
+  downCantidad(maquillaje: Maquillaje): void{
+    if(maquillaje.cantidad>0){
+      maquillaje.cantidad--;
+    }else{
+      maquillaje.cantidad = 0;
+    }
+  }
+  
+  changeCantidad(event, maquillaje: Maquillaje): void{
+    event.preventDefault;
+    console.log("KEEEEEEE");
+    console.log(event);
+    
+  }
 }
