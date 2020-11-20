@@ -8,6 +8,8 @@ import { Maquillaje } from './intefaceTable';
 })
 export class DrStockTableComponent implements OnInit {
 
+  title = 'Lista de labiales';
+
   maquillajes: Maquillaje[]=  [
     {
     name : "labial marshall",
@@ -69,7 +71,6 @@ export class DrStockTableComponent implements OnInit {
   
   changeCantidad(event, maquillaje: Maquillaje): void{
     event.preventDefault;
-    console.log("KEEEEEEE");
     console.log(event);
     
   }
