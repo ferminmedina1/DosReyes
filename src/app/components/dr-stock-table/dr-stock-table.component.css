@@ -8,7 +8,7 @@
     background-color:  rgb(255, 182, 237);
 }
 
-.cantidadTD{
-    width: 40%;
-    display: flex;
+td{
+    width: auto;
+    vertical-align: middle;
 }

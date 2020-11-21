@@ -1,3 +1,4 @@
+import { escapeIdentifier } from '@angular/compiler/src/output/abstract_emitter';
 import { Component, OnInit } from '@angular/core';
 import { Maquillaje } from './intefaceTable';
 
@@ -54,24 +55,7 @@ export class DrStockTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upCantidad(maquillaje: Maquillaje): void{
-    if(maquillaje.stock > maquillaje.cantidad)
-    maquillaje.cantidad++;
-    else{
-      maquillaje.cantidad = maquillaje.stock;
-    }
-  }
-  downCantidad(maquillaje: Maquillaje): void{
-    if(maquillaje.cantidad>0){
-      maquillaje.cantidad--;
-    }else{
-      maquillaje.cantidad = 0;
-    }
-  }
-  
-  changeCantidad(event, maquillaje: Maquillaje): void{
-    event.preventDefault;
-    console.log(event);
-    
+  maxReached(men: string): void{
+    alert(men);
   }
 }

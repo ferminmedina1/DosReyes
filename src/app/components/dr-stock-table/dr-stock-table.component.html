@@ -15,10 +15,8 @@
             <td>{{maquillaje.category}}</td>
             <td>{{maquillaje.price | currency}}</td>
             <td><span *ngIf="maquillaje.stock == 0">SIN STOCK</span><span *ngIf="maquillaje.stock > 0">{{maquillaje.stock}}</span></td>
-            <td class="cantidadTD">
-            <button class="btn btn-primary btn-sm" (click)="downCantidad(maquillaje)">-</button> 
-            <input type="number" [(ngModel)] ='maquillaje.cantidad'>
-            <button class="btn btn-primary btn-sm" (click)="upCantidad(maquillaje)">+</button>
+            <td>
+            <app-input-int [(quantity)]="maquillaje.cantidad" [stock] = "maquillaje.stock" *ngIf="maquillaje.stock" (maxReached)="maxReached($event)"></app-input-int>
             </td>
         </tr>
     </tbody>
