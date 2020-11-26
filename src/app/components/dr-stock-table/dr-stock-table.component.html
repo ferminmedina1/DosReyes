@@ -6,6 +6,7 @@
         <th>Categoria</th>
         <th>Precio</th>
         <th>Stock</th>
+        <th>Cantidad</th>
         <th>Compra</th>
     </thead>
     <tbody class="text-center "> 
@@ -18,6 +19,9 @@
             <td>
             <app-input-int [(quantity)]="maquillaje.cantidad" [stock] = "maquillaje.stock" *ngIf="maquillaje.stock" (maxReached)="maxReached($event)"></app-input-int>
             </td>
+        <td>
+            <button class="btn" (click)="addToCart(maquillaje)">Agregar!</button>
+        </td>
         </tr>
     </tbody>
 </table>

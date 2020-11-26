@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Maquillaje } from '../components/dr-stock-table/intefaceTable';
+import { Maquillaje } from '../dr-stock-table/intefaceTable';
 
 @Component({
   selector: 'app-input-int',

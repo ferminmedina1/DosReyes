@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { DrAboutComponent } from './components/dr-about/dr-about.component';
 import { DrCartComponent } from './components/dr-cart/dr-cart.component';
 import { DrProductsComponent } from './components/dr-products/dr-products.component';
-import { InputIntComponent } from './input-int/input-int.component';
+import { InputIntComponent } from './components/input-int/input-int.component';
 
 @NgModule({
   declarations: [

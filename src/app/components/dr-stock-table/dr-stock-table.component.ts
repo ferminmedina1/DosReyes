@@ -1,5 +1,6 @@
 import { escapeIdentifier } from '@angular/compiler/src/output/abstract_emitter';
 import { Component, OnInit } from '@angular/core';
+import { DrCartService } from 'src/app/dr-cart.service';
 import { Maquillaje } from './intefaceTable';
 
 @Component({
@@ -50,9 +51,17 @@ export class DrStockTableComponent implements OnInit {
       }
   ]
 
-  constructor() { }
-
+  constructor(private cart: DrCartService) { }
+ 
   ngOnInit(): void {
+  }
+
+  addToCart(maquillaje): void{
+    if(maquillaje.cantidad != 0){
+    this.cart.addToCart(maquillaje);
+    maquillaje.stock -= maquillaje.cantidad;
+    maquillaje.cantidad = 0;
+    }
   }
 
   maxReached(men: string): void{
