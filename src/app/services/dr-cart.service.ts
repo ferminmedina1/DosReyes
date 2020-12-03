@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Maquillaje } from './components/dr-stock-table/intefaceTable';
+import { Maquillaje } from '../components/dr-stock-table/intefaceTable';
 
 @Injectable({
   providedIn: 'root'

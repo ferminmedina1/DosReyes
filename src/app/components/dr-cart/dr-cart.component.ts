@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, observable } from 'rxjs';
-import { DrCartService } from 'src/app/dr-cart.service';
+import { DrCartService } from '../../services/dr-cart.service';
 import { Maquillaje } from '../dr-stock-table/intefaceTable';
 
 @Component({

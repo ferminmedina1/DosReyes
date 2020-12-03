@@ -1,7 +1,8 @@
 import { escapeIdentifier } from '@angular/compiler/src/output/abstract_emitter';
 import { Component, OnInit } from '@angular/core';
-import { DrCartService } from 'src/app/dr-cart.service';
-import { DrDataService } from 'src/app/dr-data.service';
+import { DrDataService } from '../../services/dr-data.service';
+import { DrCartService } from '../../services/dr-cart.service';
+
 import { Maquillaje } from './intefaceTable';
 
 @Component({
